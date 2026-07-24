@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+# RPS Arena — .gitignore
+#
+# This is a zero-build, single-file app. The ONLY source that ships
+# is index.html plus the four Markdown docs. Everything ignored here
+# is scratch produced by optional verification tooling or the OS —
+# none of it is required to run the app.
+# ─────────────────────────────────────────────────────────────
+
+# --- Verification scratch (see prompt.md §4 / README §13) ---
+app.js               # the <script> block extracted for `node --check`
+/verify/             # headless-harness working directory
+/screenshots/        # rendered visual-review captures
+*.tmp
+
+# --- Optional Node tooling (the app itself needs none of this) ---
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-error.log
+
+# --- Build artifacts (there is no build; guard against accidental ones) ---
+dist/
+build/
+
+# --- Logs ---
+*.log
+
+# --- Editors / IDEs ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# --- OS cruft ---
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+# Linux
+.directory
+.Trash-*
